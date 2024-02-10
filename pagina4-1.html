@@ -1,0 +1,181 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Demon Canvas</title>
+  <style>
+    canvas {
+      background-color: white;
+      text-align: center;
+    }
+  </style>
+  <script>
+    window.onload = function () {
+      var canvas = document.getElementById("micanvas");
+      var context = canvas.getContext("2d");
+
+      //circulo 1 :)
+      context.beginPath();
+      context.arc(300, 345, 250, 0, 2 * Math.PI);
+      context.fillStyle = "black";
+      context.fill();
+      context.closePath();
+      //circulo 2
+      context.beginPath();
+      context.arc(300, 345, 240, 0, 2 * Math.PI);
+      context.fillStyle = "white";
+      context.fill();
+      context.closePath();
+      //circulo 3
+      context.beginPath();
+      context.arc(300, 345, 230, 0, 2 * Math.PI);
+      context.fillStyle = "black";
+      context.fill();
+      context.closePath();
+      //circulo 4
+      context.beginPath();
+      context.arc(300, 345, 220, 0, 2 * Math.PI);
+      context.fillStyle = "white";
+      context.fill();
+      context.closePath();
+      //circulo 5
+      context.beginPath();
+      context.arc(300, 345, 210, 0, 2 * Math.PI);
+      context.fillStyle = "black";
+      context.fill();
+      context.closePath();
+      //circulo 6
+      context.beginPath();
+      context.arc(300, 345, 200, 0, 2 * Math.PI);
+      context.fillStyle = "white";
+      context.fill();
+      context.closePath();
+      //circulo 7
+      context.beginPath();
+      context.arc(300, 345, 190, 0, 2 * Math.PI);
+      context.fillStyle = "black";
+      context.fill();
+      context.closePath();
+      //circulo 8
+      context.beginPath();
+      context.arc(300, 345, 180, 0, 2 * Math.PI);
+      context.fillStyle = "white";
+      context.fill();
+      context.closePath();
+      //circulo 9
+      context.beginPath();
+      context.arc(300, 345, 170, 0, 2 * Math.PI);
+      context.fillStyle = "black";
+      context.fill();
+      context.closePath();
+      //circulo 10
+      context.beginPath();
+      context.arc(300, 345, 160, 0, 2 * Math.PI);
+      context.fillStyle = "white";
+      context.fill();
+      context.closePath();
+      //circulo 11
+      context.beginPath();
+      context.arc(300, 345, 150, 0, 2 * Math.PI);
+      context.fillStyle = "black";
+      context.fill();
+      context.closePath();
+      //circulo 12
+      context.beginPath();
+      context.arc(300, 345, 140, 0, 2 * Math.PI);
+      context.fillStyle = "white";
+      context.fill();
+      context.closePath();
+      //circulo 13
+      context.beginPath();
+      context.arc(300, 345, 130, 0, 2 * Math.PI);
+      context.fillStyle = "black";
+      context.fill();
+      context.closePath();
+      //circulo 14
+      context.beginPath();
+      context.arc(300, 345, 120, 0, 2 * Math.PI);
+      context.fillStyle = "white";
+      context.fill();
+      context.closePath();
+      //circulo 15
+      context.beginPath();
+      context.arc(300, 345, 110, 0, 2 * Math.PI);
+      context.fillStyle = "black";
+      context.fill();
+      context.closePath();
+      //circulo 16
+      context.beginPath();
+      context.arc(300, 345, 100, 0, 2 * Math.PI);
+      context.fillStyle = "white";
+      context.fill();
+      context.closePath();
+      //circulo 17
+      context.beginPath();
+      context.arc(300, 345, 90, 0, 2 * Math.PI);
+      context.fillStyle = "black";
+      context.fill();
+      context.closePath();
+      //circulo 18
+      context.beginPath();
+      context.arc(300, 345, 80, 0, 2 * Math.PI);
+      context.fillStyle = "white";
+      context.fill();
+      context.closePath();
+      //circulo 19
+      context.beginPath();
+      context.arc(300, 345, 70, 0, 2 * Math.PI);
+      context.fillStyle = "black";
+      context.fill();
+      context.closePath();
+
+      //un buena de circulos, no sabia si existia un modo mas sencillo
+
+      // body
+      context.fillStyle = "red";
+      context.fillRect(200, 300, 200, 100); // los valores son  (x,y,hancho,alto)
+
+      // head
+      context.fillStyle = "red";
+      context.fillRect(230, 200, 140, 100);
+
+      // horns
+      context.fillStyle = "black";
+      context.fillRect(220, 180, 20, 40);
+      context.fillRect(340, 180, 20, 40);
+
+      // eyes
+      context.fillStyle = "black";
+      context.fillRect(250, 230, 20, 20);
+      context.fillRect(310, 230, 20, 20);
+
+      // mouth
+      context.fillStyle = "black";
+      context.fillRect(275, 270, 40, 10);
+
+      // teeth
+      context.fillStyle = "white";
+      context.fillRect(285, 270, 5, 10);
+      context.fillRect(300, 270, 5, 10);
+
+      //legs
+      context.fillStyle = "red";
+      context.fillRect(250,400,45,150)
+
+      context.fillStyle = "red";
+      context.fillRect(300,400,45,150)
+
+      // feet nails
+      context.fillStyle = "black";
+      context.fillRect(255, 540, 5, 10);
+      context.fillRect(275, 540, 5, 10);
+
+      context.fillRect(305, 540, 5, 10);
+      context.fillRect(325, 540, 5, 10);
+
+    }
+  </script>
+</head>
+<body>
+  <canvas id="micanvas" width="800" height="600"></canvas>
+</body>
+</html>
