@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h1{
+            text-align: center;
+            background-color:ghostwhite;
+            font-size: xx-large;
+            font-family: 'Times New Roman', Times, serif;
+            color: black;
+        }
+        h2{
+            text-align: center;
+            font-size: xx-large;
+            font-family: 'Times New Roman', Times, serif;
+            color: black;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1> Presiona las Vocales en orden </h1>
+
+    <script src= "ActividadConJava.js"></script>
+    <canvas id="canvas" width="1000" height="1000"></canvas>
+  <script>
+    window.onload = function() {
+        var canvas = document.getElementById("canvas");
+        var context = canvas.getContext("2d");
+        context.font = '40pt Times New Roman';
+        context.fillStyle= "black";
+
+        var image = new Image(); //variable para guardar la imagen
+        var image2 = new Image();
+        var image3 = new Image();
+        var image4 = new Image();
+        var image5 = new Image();
+
+        image.src = "vocala.png"; //fuente de donde se toma la foto
+        image2.src = "vocale.png";
+        image3.src = "vocali.png";
+        image4.src = "vocalo.png";
+        image5.src = "vocalu.png";
+        image.onload = function() {
+        };
+
+        function onKeyboardEvent (event) {
+        switch(event.keyCode){
+
+        case keycode.A:
+        context.clearRect(0,0, innerWidth,innerHeight);
+        context.drawImage(image, 525, 150, 475, 300);
+        context.fillText('Vocal A', 665, 50);
+          break;
+
+        case keycode.E:
+        context.clearRect(0,0, innerWidth,innerHeight);
+        context.drawImage(image2, 525, 150, 475, 300);
+        context.fillText('Vocal E', 665, 50);
+         break;
+
+        case keycode.I:
+        context.clearRect(0,0, innerWidth,innerHeight);
+        context.drawImage(image3, 525, 150, 475, 300);
+        context.fillText('Vocal I', 665, 50);
+          break;
+
+        case keycode.O:
+        context.clearRect(0,0, innerWidth,innerHeight);
+        context.drawImage(image4, 525, 150, 475, 300);
+        context.fillText('Vocal O', 665, 50);
+          break;
+
+          case keycode.U:
+        context.clearRect(0,0, innerWidth,innerHeight);
+        context.drawImage(image5, 525, 150, 475, 300);
+        context.fillText('Vocal U', 665, 50);
+          break;
+
+            default:
+            console.log(event.keyCode);
+            }
+        }
+    window.addEventListener('keydown', onKeyboardEvent, false);
+    };
+    </script>
+    </body>
+</html>
