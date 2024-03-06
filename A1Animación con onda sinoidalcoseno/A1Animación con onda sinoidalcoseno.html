@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>A1 - Animacion con onda sinoidal y coseno</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    body{
+    text-align: center;
+    background-color: black;
+    }
+    canvas{
+          text-align: center;
+          border: 4px solid white;
+          background-color: black;
+        }
+    h1{
+        text-align: center;
+        font-size: xx-large;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: white;        
+    }
+    h2{
+      text-align: center;
+      font-size: medium;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      color: white;
+    }
+    </style>
+  </head>
+  <body>
+
+    <h1>A1 - Animación con onda coseno</h1>
+    <canvas id="canvas" width="1023" height="681"></canvas>
+    <h2> Usen el 90% de zoom</h2>
+
+    <script src="utils.js"></script>
+    <script src="./classes/ball.js"></script>
+    <script>
+        window.onload = function () {
+            var canvas = document.getElementById('canvas'),
+            context = canvas.getContext('2d'),
+            //esprial
+            espiral = new Image(),
+            canica = new Image(),
+            angle = 0,
+            centerX = canvas.width / 2,
+            centerY = canvas.height / 2,
+            radius = 50,
+            speed = 0.02;
+
+            espiral.src = "EspiralN.png";
+            canica.src = "bolaCAMILO.png";
+
+            espiral.onload = function () {
+            drawFrame();
+        }
+
+        function drawFrame () {  //Esta es para la imagen
+        window.requestAnimationFrame(drawFrame);
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        //dibuja el fondo
+        context.drawImage(espiral, 0, 0, canvas.width, canvas.height);
+
+        var randomSpeed = Math.random() * 0.08; //para velocidad
+        var canicaX = centerX + Math.sin(angle) * radius;
+        var canicaY = centerY + Math.cos(angle) * radius;
+
+        var pulsatingScale = 1 + 0.2 * Math.sin(angle * 0.5); //para el grosor/velocidad del pulso
+
+        context.drawImage(canica, canicaX - canica.width / 3, canicaY - canica.height / 3, canica.width * pulsatingScale, canica.height * pulsatingScale);
+        angle -= randomSpeed;
+        }
+        drawFrame();      
+      };
+    </script>
+  </body>
+</html>
