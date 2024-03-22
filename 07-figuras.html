@@ -1,0 +1,350 @@
+
+\<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Figuras07</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body{
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    }
+      canvas{
+          text-align: center;
+          border: 4px solid rgb(0, 0, 0);
+
+    }
+    h1{
+        text-align: center;
+        font-size: xx-large;
+        font-family: 'Times New Roman', Times, serif;
+        color: rgb(0, 0, 0);        
+    }
+    </style>
+  </head>
+
+        <h1>A3 - Dibujo de figuras en el canvas</h1>
+
+  <body>
+    <canvas id="canvas" width="800" height="550"></canvas>
+    <aside></aside>
+    
+    <script>
+    window.onload = function () {
+        var canvas = document.getElementById('canvas'),
+        context = canvas.getContext('2d');
+
+        //hongo tringulo concurva
+        context.save();
+        context.fillStyle = "rgb(178,87,25,255)";
+        context.strokeStyle = "black";
+        context.lineWidth = 8;
+        context.beginPath();
+        context.moveTo(200,200); //x,y
+        context.lineTo(200,200);
+        context.quadraticCurveTo(120,85,50,200); //x,y (de donde topara la curva  //para curva, para el hongo
+        context.closePath();
+        context.stroke();
+        context.fill();
+        context.restore();
+        //hongo base rectangulo
+        context.save();
+        context.fillStyle = "rgb(253,227,117,255)";
+        context.strokeStyle = "black";
+        context.lineWidth = 4;
+        context.beginPath();
+        context.fillRect(105,203,42,65); //x,y,width,heigth
+        context.strokeRect(105,203,42,65);
+        context.closePath();
+        context.stroke();
+        context.fill();
+        context.closePath();
+        context.restore();
+        //hongo sombra del tringulo
+        context.save();
+        context.fillStyle = "rgb(152,72,17,255)";
+        context.beginPath();
+        context.moveTo(100,200); //x,y
+        context.lineTo(100,200);
+        context.quadraticCurveTo(128,95,50,200); //x,y (de donde topara la curva  //para curva, para el hongo
+        context.closePath();
+        context.fill();
+        context.restore();
+        //hongo base de rectagulo sombra
+        context.save();
+        context.fillStyle = "rgb(226,201,96,255)";
+        context.beginPath();
+        context.fillRect(106.5,205,10,61); //x,y,width,heigth
+        context.closePath();
+        context.fill();
+        context.closePath();
+        context.restore();
+
+
+
+
+        //casa rectangulo chimenea
+        context.save();
+        context.fillStyle = "rgb(255, 125, 44)";
+        context.strokeStyle = "black";
+        context.lineWidth = 4;
+        context.beginPath();
+        context.fillRect(400,145,35,35); //x,y,width,heigth
+        context.strokeRect(400,145,35,35);
+        context.closePath();
+        context.stroke();
+        context.fill();
+        context.closePath();
+        context.restore();
+        //casa triangulo sin curva
+        context.save();
+        context.fillStyle = "rgb(62, 35, 160)";
+        context.strokeStyle = "black";
+        context.lineWidth = 8;
+        context.beginPath();
+        context.moveTo(392,195); //posicion de donde va a "empezar"
+        context.lineTo(450,125); //x,y
+        context.lineTo(507,195); //x,y
+        context.closePath();
+        context.stroke();
+        context.fill();
+        context.restore();
+        //casa rectangulo
+        context.save();
+        context.fillStyle = "rgb(255, 125, 44)";
+        context.strokeStyle = "black";
+        context.lineWidth = 5;
+        context.beginPath();
+        context.fillRect(400,198,100,85); //x,y,width,heigth
+        context.strokeRect(400,198,100,85);
+        context.closePath();
+        context.stroke();
+        context.fill();
+        context.closePath();
+        context.restore();
+        //casa rectangulo puerta
+        context.save();
+        context.fillStyle = "rgb(62, 35, 160)";
+        context.strokeStyle = "black";
+        context.lineWidth = 4;
+        context.beginPath();
+        context.fillRect(450,222,35,60); //x,y,width,heigth
+        context.strokeRect(450,222,35,60);
+        context.closePath();
+        context.stroke();
+        context.fill();
+        context.closePath();
+        context.restore();
+        //casa rectangulo ventana
+        context.save();
+        context.fillStyle = "rgb(255, 255, 255)";
+        context.strokeStyle = "black";
+        context.lineWidth = 3;
+        context.beginPath();
+        context.fillRect(425,230,15,15); //x,y,width,heigth
+        context.strokeRect(425,230,15,15);
+        context.closePath();
+        context.stroke();
+        context.fill();
+        context.closePath();
+        context.restore();
+        //casa rectangulo ventana 2
+        context.save();
+        context.fillStyle = "rgb(255, 255, 255)";
+        context.strokeStyle = "black";
+        context.lineWidth = 3;
+        context.beginPath();
+        context.fillRect(410,230,15,15); //x,y,width,heigth
+        context.strokeRect(410,230,15,15);
+        context.closePath();
+        context.stroke();
+        context.fill();
+        context.closePath();
+        context.restore();
+        //casa rectangulo ventana 3
+        context.save();
+        context.fillStyle = "rgb(255, 255, 255)";
+        context.strokeStyle = "black";
+        context.lineWidth = 3;
+        context.beginPath();
+        context.fillRect(410,245,15,15); //x,y,width,heigth
+        context.strokeRect(410,245,15,15);
+        context.closePath();
+        context.stroke();
+        context.fill();
+        context.closePath();
+        context.restore();
+        //casa rectangulo ventana 4
+        context.save();
+        context.fillStyle = "rgb(255, 255, 255)";
+        context.strokeStyle = "black";
+        context.lineWidth = 3;
+        context.beginPath();
+        context.fillRect(425,245,15,15); //x,y,width,heigth
+        context.strokeRect(425,245,15,15);
+        context.closePath();
+        context.stroke();
+        context.fill();
+        context.closePath();
+        context.restore();
+
+
+
+
+        //estrella triangulo 1
+        context.save();
+        context.fillStyle = "rgb(255, 243, 74)";
+        context.beginPath();
+        context.moveTo(125,350); //posicion de donde va a "empezar" punto de arriba
+        context.lineTo(150,400); //x,y punto de derecha
+        context.lineTo(100,400); //x,y punto de  izqu
+        context.closePath();
+        context.fill();
+        context.restore();
+        //estrella triangulo 2
+        context.save();
+        context.fillStyle = "rgb(255, 243, 74)";
+        context.beginPath();
+        context.moveTo(200,400); //posicion de donde va a "empezar" punto de arriba
+        context.lineTo(175,450); //x,y punto de derecha
+        context.lineTo(150,400); //x,y punto de  izqu
+        context.closePath();
+        context.fill();
+        context.restore();      
+        //estrella triangulo 3
+        context.save();
+        context.fillStyle = "rgb(255, 243, 74)";
+        context.beginPath();
+        context.moveTo(200,500); //posicion de donde va a "empezar" punto de arriba
+        context.lineTo(150,500); //x,y punto de derecha
+        context.lineTo(175,450); //x,y punto de  izqu
+        context.closePath();
+        context.fill();
+        context.restore();
+        //estrella triangulo 4
+        context.save();
+        context.fillStyle = "rgb(255, 243, 74)";
+        context.beginPath();
+        context.moveTo(125,550); //posicion de donde va a "empezar" punto de arriba
+        context.lineTo(100,500); //x,y punto de derecha
+        context.lineTo(150,500); //x,y punto de  izqu
+        context.closePath();
+        context.fill();
+        context.restore();
+        //estrella triangulo 5
+        context.save();
+        context.fillStyle = "rgb(255, 243, 74)";
+        context.beginPath();
+        context.moveTo(75,450); //posicion de donde va a "empezar" punto de arriba
+        context.lineTo(50,500); //x,y punto de derecha
+        context.lineTo(100,500); //x,y punto de  izqu
+        context.closePath();
+        context.fill();
+        context.restore();
+        //estrella triangulo 6
+        context.save();
+        context.fillStyle = "rgb(255, 243, 74)";
+        context.beginPath();
+        context.moveTo(50,400); //posicion de donde va a "empezar" punto de arriba
+        context.lineTo(100,400); //x,y punto de derecha
+        context.lineTo(75,450); //x,y punto de  izqu
+        context.closePath();
+        context.fill();
+        context.restore();
+
+
+
+
+        //circulo copn gradiante para luna
+        context.save();
+        c1 = {x: 700, y: 200, radius: 0},  //gradient start circle
+        c2 = {x: 700, y: 200, radius: 120}, //gradient end circle
+        gradient = context.createRadialGradient(c1.x, c1.y, c1.radius,
+                                                    c2.x, c2.y, c2.radius);
+        //all black alpha blend
+        gradient.addColorStop(0, "rgb(255, 251, 199)");
+        gradient.addColorStop(0.5, "rgb(253, 250, 206)");
+        gradient.addColorStop(1, "rgb(0, 0, 0, 1)"); //alpha required
+        context.fillStyle = gradient;
+        context.beginPath();
+        context.arc(700,200,75,0,2 * Math.PI); //x,y,
+        context.fill();
+        context.closePath();
+        context.restore();
+        //circulo blanco para luna
+        context.save();
+        context.fillStyle = "white";
+        context.beginPath();
+        context.arc(670,200,50,0,2 * Math.PI); //x,y,
+        context.fill();
+        context.closePath();
+        context.restore();
+
+        //barco rectangulo
+        context.save();
+        context.fillStyle = "rgb(255, 231, 74)";
+        context.beginPath();
+        context.fillRect(550,425,70,70); //x,y,width,heigth
+        context.closePath();
+        context.fill();
+        context.closePath();
+        context.restore();
+        //barco tringulo
+        context.save();
+        context.fillStyle = "rgb(255, 74, 74)";
+        context.beginPath();
+        context.moveTo(475,425); //posicion de donde va a "empezar" punto de arriba
+        context.lineTo(550,425); //x,y punto de derecha
+        context.lineTo(550,495); //x,y punto de  izqu
+        context.closePath();
+        context.fill();
+        context.restore();
+        //barco trignulo 2
+        context.save();
+        context.fillStyle = "rgb(255, 149, 74)";
+        context.beginPath();
+        context.moveTo(690,425); //posicion de donde va a "empezar" punto de arriba
+        context.lineTo(620,425); //x,y punto de derecha
+        context.lineTo(620,495); //x,y punto de  izqu
+        context.closePath();
+        context.fill();
+        context.restore();
+        //circulo
+        context.save();
+        context.fillStyle = "rgb(74, 219, 255)";
+        context.beginPath();
+        context.arc(585,460,20,0,2 * Math.PI); //x,y,
+        context.fill();
+        context.closePath();
+        context.restore();
+        //barco rectangulo de arriba
+        context.save();
+        context.fillStyle = "rgb(186, 74, 255)";
+        context.beginPath();
+        context.fillRect(565,365,40,60); //x,y,width,heigth
+        context.closePath();
+        context.fill();
+        context.closePath();
+        context.restore();
+        //circulo de humo
+        context.save();
+        context.fillStyle = "black";
+        context.beginPath();
+        context.arc(625,340,10,0,2 * Math.PI); //x,y,
+        context.fill();
+        context.closePath();
+        context.restore();
+        //circulo de humo 2
+        context.save();
+        context.fillStyle = "black";
+        context.beginPath();
+        context.arc(610,355,5,0,2 * Math.PI); //x,y,
+        context.fill();
+        context.closePath();
+        context.restore();
+
+    };
+    </script>
+    </body>
+<html>
